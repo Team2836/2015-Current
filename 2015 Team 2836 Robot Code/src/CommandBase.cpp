@@ -1,10 +1,14 @@
 #include "CommandBase.h"
 #include "Subsystems/ExampleSubsystem.h"
 #include "Commands/Scheduler.h"
+#include "Subsystems/DriveTrain.h"
+#include "Subsystems/ToteMagnet.h"
 
 // Initialize a single static instance of all of your subsystems to NULL
 ExampleSubsystem* CommandBase::examplesubsystem = NULL;
 OI* CommandBase::oi = NULL;
+DriveTrain* CommandBase::drivetrain = NULL;
+ToteMagnet* CommandBase::totemagnet = NULL;
 
 CommandBase::CommandBase(char const *name) :
 		Command(name)
@@ -24,4 +28,6 @@ void CommandBase::init()
 	examplesubsystem = new ExampleSubsystem();
 
 	oi = new OI();
+	drivetrain = new DriveTrain();
+	totemagnet = new ToteMagnet();
 }
