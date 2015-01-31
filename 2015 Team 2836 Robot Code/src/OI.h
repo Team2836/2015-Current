@@ -8,7 +8,7 @@ class OI
 private:
 
 public:
-	Joystick *operator1;
+	Joystick *operator1, *operator2, *driver1, *driver2;
 
 	OI();
 };
