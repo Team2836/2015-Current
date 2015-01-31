@@ -15,15 +15,26 @@ void ToteMagnet::InitDefaultCommand()
 }
 void ToteMagnet::MoveTalonIn(float speed, int whichjoystick)
 {
-	if(whichjoystick == 1)
+	bool bls4tote = ls4tote->Get();
+	if(bls4tote == 1)
 	{
-		t5->Set(speed);
+		t5->Set(0);
 	}
-	if(whichjoystick == 2)
+	if(bls4tote == 0)
 	{
-		t5->Set(speed);
+		if(whichjoystick == 1)
+			{
+				t5->Set(speed);
+			}
+			if(whichjoystick == 2)
+			{
+				t5->Set(speed);
+			}
 	}
 }
-
+void ToteMagnet::MoveTalonOut(float speed)
+{
+	t5->Set(1);
+}
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
