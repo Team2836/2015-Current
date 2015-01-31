@@ -1,0 +1,3 @@
+port 4-> tote magnet
+port 5-> claw
+port 6->elevator
