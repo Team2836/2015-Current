@@ -1,5 +1,6 @@
 #include "CommandBase.h"
 #include "Subsystems/ExampleSubsystem.h"
+
 #include "Commands/Scheduler.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/ToteMagnet.h"
@@ -9,6 +10,7 @@ ExampleSubsystem* CommandBase::examplesubsystem = NULL;
 OI* CommandBase::oi = NULL;
 DriveTrain* CommandBase::drivetrain = NULL;
 ToteMagnet* CommandBase::totemagnet = NULL;
+
 
 CommandBase::CommandBase(char const *name) :
 		Command(name)

@@ -4,6 +4,7 @@
 #include <string>
 #include "Commands/Command.h"
 #include "Subsystems/ExampleSubsystem.h"
+
 #include "OI.h"
 #include "WPILib.h"
 #include "Subsystems/DriveTrain.h"
@@ -25,6 +26,7 @@ public:
 	static OI *oi;
 	static DriveTrain *drivetrain;
 	static ToteMagnet *totemagnet;
+
 };
 
 #endif
