@@ -16,19 +16,19 @@ void ToteControlReverse::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ToteControlReverse::Execute()
 {
-	bool OPbutton = oi->operator1->GetRawButton(1);
-	bool DRbutton = oi->driver1->GetRawButton(1);
-	if(OPbutton == 1 && DRbutton == 1)
+	bool OPbutton = oi->operator1->GetRawButton(1);// checks to see if the trigger on the operators joystick is pressed
+	bool DRbutton = oi->driver1->GetRawButton(1);// checks to see if the trigger on the drivers joystick is pressed
+	if(OPbutton == 1 && DRbutton == 1)// if both the operators and drivers triggers are pressed
 	{
-		totemagnet->MoveTalonIn(1, 1);
+		totemagnet->MoveTalonIn(1, 1);// operator overrides driver and sets speed of the tote magnet to 1
 	}
-	if(OPbutton == 0 && DRbutton == 1)
+	if(OPbutton == 0 && DRbutton == 1)// if just driver's trigger is pressed
 	{
-		totemagnet->MoveTalonIn(1, 2);
+		totemagnet->MoveTalonIn(1, 2);// outputs speed of one and used by the driver
 	}
-	if(OPbutton == 1 && DRbutton == 0)
+	if(OPbutton == 1 && DRbutton == 0)// if just operator's trigger is pressed
 	{
-		totemagnet->MoveTalonIn(1, 1);
+		totemagnet->MoveTalonIn(1, 1);// outputs speed of one and used by operator
 	}
 }
 
