@@ -14,7 +14,8 @@ private:
 public:
 	ToteMagnet();
 	void InitDefaultCommand();
-	void MoveTalonIn(float speed);
+	void MoveTalonIn(float speed, int whichjoystick);
+
 };
 
 #endif

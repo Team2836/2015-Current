@@ -13,9 +13,17 @@ void ToteMagnet::InitDefaultCommand()
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());
 }
-void ToteMagnet::MoveTalonIn(float speed)
+void ToteMagnet::MoveTalonIn(float speed, int whichjoystick)
 {
-	t5->Set(speed);
+	if(whichjoystick == 1)
+	{
+		t5->Set(speed);
+	}
+	if(whichjoystick == 2)
+	{
+		t5->Set(speed);
+	}
 }
+
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
