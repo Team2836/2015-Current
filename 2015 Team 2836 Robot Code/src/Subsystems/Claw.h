@@ -14,6 +14,8 @@ private:
 public:
 	Claw();
 	void InitDefaultCommand();
+	void MoveIn();
+	void MoveOut();
 };
 
 #endif

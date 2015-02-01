@@ -1,3 +1,4 @@
+#include <Commands/ToteControl.h>
 #include "ToteMagnet.h"
 #include "../RobotMap.h"
 
@@ -11,9 +12,10 @@ ToteMagnet::ToteMagnet() :
 void ToteMagnet::InitDefaultCommand()
 {
 	// Set the default command for a subsystem here.
-	//SetDefaultCommand(new MySpecialCommand());
+	//SetDefaultCommand(new MySpecialCommand();
+	SetDefaultCommand(new ToteControl());
 }
-void ToteMagnet::MoveTalonIn(float speed, int whichjoystick)
+void ToteMagnet::MoveTalon(float speed, int whichjoystick)
 {
 	bool bls4tote = ls4tote->Get();
 	if(bls4tote == 1)// if the tote is against the back of the robot
@@ -32,9 +34,6 @@ void ToteMagnet::MoveTalonIn(float speed, int whichjoystick)
 			}
 	}
 }
-void ToteMagnet::MoveTalonOut(float speed)
-{
-	t5->Set(1);// move the tote out at a speed of one
-}
+
 // Put methods for controlling this subsystem
 // here. Call these from Commands.

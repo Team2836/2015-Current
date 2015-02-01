@@ -11,6 +11,7 @@ OI* CommandBase::oi = NULL;
 DriveTrain* CommandBase::drivetrain = NULL;
 ToteMagnet* CommandBase::totemagnet = NULL;
 Claw* CommandBase::claw = NULL;
+CameraControl*CommandBase::cameracontrol = NULL;
 
 CommandBase::CommandBase(char const *name) :
 		Command(name)
@@ -32,4 +33,5 @@ void CommandBase::init()
 	oi = new OI();
 	drivetrain = new DriveTrain();
 	totemagnet = new ToteMagnet();
+	cameracontrol = new CameraControl();
 }

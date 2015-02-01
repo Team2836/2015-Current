@@ -6,6 +6,7 @@
 #include "Subsystems/ExampleSubsystem.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/ToteMagnet.h"
+#include"Subsystems/CameraControl.h"
 #include "OI.h"
 #include "WPILib.h"
 #include "Subsystems/Claw.h"
@@ -28,6 +29,7 @@ public:
 	static DriveTrain *drivetrain;
 	static ToteMagnet *totemagnet;
 	static Claw *claw;
+	static CameraControl *cameracontrol;
 };
 
 #endif
