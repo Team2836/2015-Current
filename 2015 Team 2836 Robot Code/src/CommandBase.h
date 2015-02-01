@@ -8,6 +8,8 @@
 #include "Subsystems/ToteMagnet.h"
 #include "OI.h"
 #include "WPILib.h"
+#include "Subsystems/Claw.h"
+
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -25,6 +27,7 @@ public:
 	static OI *oi;
 	static DriveTrain *drivetrain;
 	static ToteMagnet *totemagnet;
+	static Claw *claw;
 };
 
 #endif

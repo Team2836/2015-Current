@@ -1,13 +1,13 @@
-#include "DriveTrain.h"
+#include "Claw.h"
 #include "../RobotMap.h"
 
-DriveTrain::DriveTrain() :
+Claw::Claw() :
 		Subsystem("ExampleSubsystem")
 {
 
 }
 
-void DriveTrain::InitDefaultCommand()
+void Claw::InitDefaultCommand()
 {
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());
@@ -15,6 +15,3 @@ void DriveTrain::InitDefaultCommand()
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-
-
-
