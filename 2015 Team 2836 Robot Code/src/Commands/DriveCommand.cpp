@@ -16,10 +16,10 @@ void DriveCommand::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void DriveCommand::Execute()
 {
-	drivetrain->FLDrive(oi->driver2->GetY() + oi->driver2->GetX() + oi->driver2->GetZ());
-	drivetrain->BLDrive(oi->driver2->GetY() - oi->driver2->GetX() + oi->driver2->GetZ());
-	drivetrain->FRDrive(oi->driver2->GetY() - oi->driver2->GetX() - oi->driver2->GetZ());
-	drivetrain->BRDrive(oi->driver2->GetY() + oi->driver2->GetX() - oi->driver2->GetZ());
+	drivetrain->FLDrive(oi->driver1->GetY() + oi->driver1->GetX() + oi->driver1->GetZ());
+	drivetrain->BLDrive(oi->driver1->GetY() - oi->driver1->GetX() + oi->driver1->GetZ());
+	drivetrain->FRDrive(oi->driver1->GetY() - oi->driver1->GetX() - oi->driver1->GetZ());
+	drivetrain->BRDrive(oi->driver1->GetY() + oi->driver1->GetX() - oi->driver1->GetZ());
 }
 
 // Make this return true when this Command no longer needs to run execute()
