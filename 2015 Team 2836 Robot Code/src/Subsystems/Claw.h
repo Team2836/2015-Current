@@ -1,22 +1,21 @@
-#ifndef ToteMagnet_H
-#define ToteMagnet_H
+#ifndef Claw_H
+#define Claw_H
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
-class ToteMagnet: public Subsystem
+class Claw: public Subsystem
 {
 private:
-	Talon *t5;
-	DigitalInput *ls4tote;
+	Talon *t6;
+	DigitalInput *ls1forclaw, *ls2forclaw, *ls3forclaw;
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	ToteMagnet();
+	Claw();
 	void InitDefaultCommand();
-	void MoveTalon(float speed, int whichjoystick);
-
-
+	void MoveIn();
+	void MoveOut();
 };
 
 #endif

@@ -1,39 +1,39 @@
-#include "ToteMagnetControlForward.h"
+#include "ClawOut.h"
 
-ToteMagnetControlForward::ToteMagnetControlForward()
+ClawOut::ClawOut()
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
-	Requires(totemagnet);
+	Requires(claw);
 }
 
 // Called just before this Command runs the first time
-void ToteMagnetControlForward::Initialize()
+void ClawOut::Initialize()
 {
-	totemagnet->MoveTalonOut(1);
+
 }
 
 // Called repeatedly when this Command is scheduled to run
-void ToteMagnetControlForward::Execute()
+void ClawOut::Execute()
 {
-
+	claw->MoveOut();
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool ToteMagnetControlForward::IsFinished()
+bool ClawOut::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void ToteMagnetControlForward::End()
+void ClawOut::End()
 {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ToteMagnetControlForward::Interrupted()
+void ClawOut::Interrupted()
 {
 
 }

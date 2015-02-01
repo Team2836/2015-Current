@@ -1,22 +1,19 @@
-#ifndef ToteMagnet_H
-#define ToteMagnet_H
+#ifndef CameraControl_H
+#define CameraControl_H
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
-class ToteMagnet: public Subsystem
+class CameraControl: public Subsystem
 {
 private:
-	Talon *t5;
-	DigitalInput *ls4tote;
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	ToteMagnet();
+	CameraControl();
 	void InitDefaultCommand();
-	void MoveTalon(float speed, int whichjoystick);
-
-
+	void FrontCamera();
+	void BackCamera();
 };
 
 #endif

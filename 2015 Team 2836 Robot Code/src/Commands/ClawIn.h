@@ -1,13 +1,13 @@
-#ifndef ToteMagnetControlForward_H
-#define ToteMagnetControlForward_H
+#ifndef ClawIn_H
+#define ClawIn_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
 
-class ToteMagnetControlForward: public CommandBase
+class ClawIn: public CommandBase
 {
 public:
-	ToteMagnetControlForward();
+	ClawIn();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

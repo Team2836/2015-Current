@@ -1,13 +1,13 @@
-#ifndef ToteControlReverse_H
-#define ToteControlReverse_H
+#ifndef ToteControl_H
+#define ToteControl_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
 
-class ToteControlReverse: public CommandBase
+class ToteControl: public CommandBase
 {
 public:
-	ToteControlReverse();
+	ToteControl();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
