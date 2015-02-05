@@ -3,6 +3,7 @@
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
+#include <string>
 
 class ToteMagnet: public Subsystem
 {
@@ -14,7 +15,7 @@ private:
 public:
 	ToteMagnet();
 	void InitDefaultCommand();
-	void MoveTalon(float speed, int whichjoystick);
+	void MoveTalon(float speed);
 
 
 };

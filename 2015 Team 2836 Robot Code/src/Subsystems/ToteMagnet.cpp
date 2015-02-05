@@ -15,24 +15,11 @@ void ToteMagnet::InitDefaultCommand()
 	//SetDefaultCommand(new MySpecialCommand();
 	SetDefaultCommand(new ToteControl());
 }
-void ToteMagnet::MoveTalon(float speed, int whichjoystick)
+void ToteMagnet::MoveTalon(float speed)
 {
-	bool bls4tote = ls4tote->Get();
-	if(bls4tote == 1)// if the tote is against the back of the robot
-	{
-		t5->Set(0);// not moving the robot
-	}
-	else if(bls4tote == 0)// if the tote isn't against the back of the robot
-	{
-		if(whichjoystick == 1)//operator has control
-			{
-				t5->Set(speed);//moving the tote out a speed of one
-			}
-		if(whichjoystick == 2)//driver has control
-			{
-				t5->Set(speed);//moving the tote out at a speed of one
-			}
-	}
+	t5->Set(speed);
+	std::cout << speed << std::endl;
+	//std::cout << speed << std::endl;
 }
 
 // Put methods for controlling this subsystem
