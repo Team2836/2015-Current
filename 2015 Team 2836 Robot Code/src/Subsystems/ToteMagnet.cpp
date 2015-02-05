@@ -18,6 +18,7 @@ void ToteMagnet::InitDefaultCommand()
 void ToteMagnet::MoveTalon(float speed)
 {
 	t5->Set(speed);
+	std::cout << speed << std::endl;
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
