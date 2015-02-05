@@ -15,10 +15,23 @@ void ToteMagnet::InitDefaultCommand()
 	//SetDefaultCommand(new MySpecialCommand();
 	SetDefaultCommand(new ToteControl());
 }
-void ToteMagnet::MoveTalon(float speed)
+void ToteMagnet::MoveTalon(float speed, int joystick)
 {
-	t5->Set(speed);
-	std::cout << speed << std::endl;
+	bool bls4tote = ls4tote->Get();
+	if(bls4tote == true)
+	{
+		t5->Set(0);
+	}
+	else if(bls4tote == false && joystick == 1)
+	{
+		t5->Set(speed);
+	}
+	else if(bls4tote == false && joystick == 2)
+	{
+		t5->Set(speed);
+	}
+	//t5->Set(speed);
+	//std::cout << speed << std::endl;
 	//std::cout << speed << std::endl;
 }
 

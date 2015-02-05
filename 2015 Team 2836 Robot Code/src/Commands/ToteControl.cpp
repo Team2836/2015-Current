@@ -16,7 +16,26 @@ void ToteControl::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ToteControl::Execute()
 {
-	totemagnet->MoveTalon((oi->operator1->GetZ()));
+	bool OPuse;
+	bool DRbutton = oi->driver1->GetTrigger();
+	if(oi->operator1->GetZ() > -.4 && oi->operator1->GetZ() < .4)
+	{
+		bool OPuse = false;
+	}
+	else
+	{
+		bool OPuse = true;
+	}
+	if(OPuse == false && DRbutton == true)
+	{
+		totemagnet->MoveTalon(-1, 1);
+	}
+	else if(OPuse == true)
+	{
+		totemagnet->MoveTalon(-(oi->operator1->GetZ()), 2);
+	}
+
+	//totemagnet->MoveTalon((oi->operator1->GetZ()));
 }
 
 // Make this return true when this Command no longer needs to run execute()
